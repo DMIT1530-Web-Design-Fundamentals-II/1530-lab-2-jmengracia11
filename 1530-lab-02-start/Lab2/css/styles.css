@@ -1,0 +1,199 @@
+/*
+
+COLOUR PALETTE
+
+orange accent       ff8e2d
+teal                20abad
+darker teal         007c84
+off-white           eeeaeb
+
+GOOGLE FONTS 
+
+font-family: 'Poppins', sans-serif;
+font-family: 'Pacifico', cursive;
+
+*/
+
+/* UNIVERSAL STYLES */
+body{
+	color: #eeeaeb;
+	font-family: 'Poppins', sans-serif;
+}
+
+h1,
+.content .title{
+	padding-top: 1rem;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+}
+
+header{
+	background-color: #20abad;
+}
+
+ul.menu a,
+ul.menu a:link,
+ul.menu a:active,
+ul.menu a:visited{
+	display: block;
+	color: #eeeaeb;
+	text-transform: uppercase;
+	text-underline-position: under;
+}
+
+ul.submenu a,
+ul.submenu a:link,
+ul.submenu a:active,
+ul.submenu a:visited{
+	text-decoration: none;
+}
+
+ul.menu a:hover{
+	background-color: #007c84;
+	border-radius: 0.5rem;
+}
+
+nav svg{
+	display: none;
+}
+
+section.content{
+	background-color: #ff8e2d;
+}
+
+.content .cta a,
+.content .cta a:link,
+.content .cta a:active
+.content .cta a:visited{
+	border-radius: 0.5rem;
+	padding: 0.75rem;
+	color: #eeeaeb;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: #20abad;
+}
+
+/* MOBILE VIEW */
+section.content{
+	background: url(../img/grapefruit-bg-sm.webp);
+	background-size: cover;
+	height: 50vh;
+}
+
+ul.menu{
+	padding: 1.5rem 0;
+}
+
+ul.menu a{
+	padding: 0.75rem;
+}
+
+ul.submenu a{
+	padding-left: 2rem;
+}
+
+.content .wrapper{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	text-align: center;
+}
+
+.content .title{
+	font-size: 2.5rem;
+	padding: 3rem 3rem 0 3rem;
+}
+
+.wrapper{
+	width: 17rem;
+	max-width: 50rem;
+	text-align: center;
+	margin-left: 7rem;
+}
+
+.cta{
+	padding-top: 1rem;
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 720px) {
+	section.content{
+		background: url(../img/grapefruit-bg.webp) center bottom / cover;
+		height: 120vh;
+	}
+
+	nav{
+		margin: 0 auto;
+		max-width: 60rem;
+	}
+
+	ul.menu{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	ul.menu svg{
+		display: unset;
+		width: 1rem;
+		fill: #eeeaeb;
+	}
+
+	ul.menu li{
+		flex: 1 0 auto;
+		position: relative;
+		text-align: center;
+		white-space: nowrap;
+		margin: 1rem;
+	}
+
+	ul.submenu{
+		visibility: hidden;
+		position: absolute;
+		padding: 0;
+		border-radius: 0.5rem;
+		background-color: #20abad;
+	}
+
+	ul.menu li:hover > ul{
+		visibility: visible;
+	}
+
+	ul.submenu li{
+		margin: 0;
+		text-align: left;
+	}
+
+	ul.submenu a{
+		padding-left: 0.75rem;
+	}
+
+	ul.menu li:focus-within > ul,
+	ul.menu li > ul:focus {
+		visibility: visible;
+		display: block;
+	}
+
+	.wrapper{
+		width: 25rem;
+		margin-left: 45rem;
+		padding-top: 9rem;
+	}
+}
+
+/* HELPER CLASSES */
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+/* LARGEST VIEW */
+@media screen and (min-width: 1024px) {
+    
+}
